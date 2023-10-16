@@ -1,0 +1,14 @@
+.whats-app-button-container{
+    position: fixed;
+    right: 0;
+    bottom: 60px;
+    bottom:0;
+    z-index: 10;
+    background-color: rgb(0, 235, 12);
+    button{
+        background-color: transparent;
+        border:none;
+        padding:10px ;
+        color:white;
+    }
+}

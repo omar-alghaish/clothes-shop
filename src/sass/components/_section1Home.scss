@@ -1,0 +1,114 @@
+.section1-home-container {
+  position: relative;
+  height: max-content;
+  width: 90%;
+  margin: 50px auto;
+  display: flex;
+  gap: 10px;
+  .children {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    &:nth-child(1) {
+      width: 40%;
+      background-color: black;
+    }
+    &:nth-child(2) {
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      div {
+        height: 50%;
+        overflow: hidden;
+        background-color: rgb(255, 4, 4);
+        &:nth-child(2) {
+          background: black;
+          color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 20px;
+          span {
+            border-radius: 20px;
+            border: white 1px solid;
+            padding: 10px 20px;
+            width: max-content;
+          }
+          p {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      width: 40%;
+      margin-left: 0;
+      background-color: rgb(255, 106, 0);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.9;
+    }
+    .text {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      display: flex;
+      gap: 10px;
+      padding: 20px;
+      color: white;
+      flex-direction: column;
+      justify-content: flex-end;
+      .buttons {
+        display: flex;
+        gap: 8px;
+        button {
+          background: black;
+          color: white;
+          border: none;
+          padding: 13px 20px;
+          border-radius: 30px;
+          font-size: 13px;
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .section1-home-container {
+    flex-direction: column;
+    width: 96%;
+    .children {
+      width: 100%;
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        width: 100%;
+      }
+      &:nth-child(2) {
+        height: max-content;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        div {
+          height: 100%;
+          &:nth-child(2) {
+            height: 100%;
+            P {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

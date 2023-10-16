@@ -1,0 +1,109 @@
+.bag-container-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .card {
+      height: 100px;
+      display: flex;
+      width: 90%;
+      margin: 0 auto;
+      background-color: rgba(247, 247, 255, 0);
+      overflow: hidden;
+      border-bottom: 1px solid rgb(161, 161, 161);
+      .img-container {
+        width: 80px;
+        height: 100%;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      //   border-radius: 5px;
+  
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+      color: rgb(0, 0, 0);
+        .title {
+          font{
+            size:20px;
+            weight:700;
+          }
+          // font-weight: 700;
+          // font-size: 20px;
+          padding-bottom: 10px;
+        }
+        .price-section{
+          display: flex;
+          gap: 10px;
+        }
+      }
+    }
+    .buy-now{
+      background-color: rgb(255, 0, 0);
+      border: none;
+      height: 50px;
+      color: white;
+      width: 90%;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+  }
+  
+
+  .testNested{
+    margin : auto{
+      top:10px;
+      bottom: 15px;
+    }
+  }
+
+  .main-box{
+    background:red;
+    border:none;
+    padding:15px;
+  }
+
+  .ads{
+    @extend .main-box;
+    font-size: 20px;
+    color: red;
+  }
+
+
+// that is called placeholder it maked for reuse only but there is nothing called main-box 
+  %main-box{
+    background:red;
+    border:none;
+    padding:15px;
+  }
+
+  .ads{
+    @extend %main-box;
+    font-size: 20px;
+    color: red;
+  }
+
+
+  $theme: "dark";
+
+  .omar {
+    @if $theme == "light"{
+      //some code
+    }@else{
+      //some code
+    }
+  }
+ $rounded: true;
+
+ .omar {
+  border-radius: if($rounded, 6px , null);
+ }
+
+ $company: "omar";
+ $position: "left";
+ .ad-#{$company}-#{unique-id()}{
+   #{$position}: 0;
+ }

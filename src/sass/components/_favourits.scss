@@ -1,0 +1,41 @@
+.favourits-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .card {
+    height: 100px;
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgba(40, 40, 56, 0);
+    overflow: hidden;
+    // padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.288);
+    .img-container {
+      width: 80px;
+      height: 100%;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    //   border-radius: 5px;
+
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+    color: rgb(0, 0, 0);
+      .title {
+        font-weight: 700;
+        font-size: 20px;
+        padding-bottom: 10px;
+      }
+      .price-section{
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+}

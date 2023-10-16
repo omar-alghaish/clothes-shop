@@ -1,0 +1,13 @@
+.App.dark {
+    background-color: rgba(0, 0, 0, 0);
+    // color: white;
+    height: max-content;
+    .profile-container{
+        color: white;
+    }
+    input{
+        background-color: transparent;
+        color: white;
+        border-bottom: solid 1px white;
+    }
+}

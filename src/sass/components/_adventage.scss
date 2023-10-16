@@ -1,0 +1,52 @@
+.adventages-container{
+    background: rgb(235, 245, 255);
+    margin: 50px auto;
+    .swiper-slide{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+             
+    } .swiper-pagination-bullet-active{
+                background-color: red;
+              }
+    .adventage{
+        position: relative;
+        width: max-content;
+        max-width: 80%;
+        
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 80px 0;
+        h3{
+            font-size: 17px;
+            font-weight: 500;
+            color: rgb(0, 0, 0);
+        }
+      p{
+       color:rgb(150, 150, 155);
+    }   
+    i{
+        position: absolute;
+        width: 40px;
+        height: 100%;
+        left: -30px;
+        top: 0;
+        display: flex;
+        align-items: center;
+font-size: 20px;
+color:rgb(150, 150, 155);
+
+    }
+    }
+   
+}
+
+@media screen and (max-width:850px) {
+    .adventages-container{
+     margin: 20px auto;
+        // padding: 80px 100px;
+        padding: 10px;
+    }
+
+}

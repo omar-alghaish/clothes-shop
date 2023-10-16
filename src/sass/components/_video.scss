@@ -1,0 +1,42 @@
+.video-container {
+  width: 94%;
+  height: 100vh;
+  margin: 50px auto;
+  padding: 10px;
+  position: relative;
+
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-fit: cover;
+    z-index: 10;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(0, 0, 0) 50%, red 50%);
+    z-index: -1;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .video-container {
+    width: 96%;
+    height: 40vh;
+    padding: 5px;
+    margin: 20px auto;
+    margin-top: 50px;
+    &::after {
+      content: "";
+      position: absolute;
+
+      z-index: -1;
+    }
+  }
+}

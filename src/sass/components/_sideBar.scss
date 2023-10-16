@@ -1,0 +1,145 @@
+.side-bar-container {
+  display: none;
+}
+.side-bar-container.show {
+  width: 400px;
+  max-width: 100%;
+  padding: 100px 50px;
+  display: block;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  .category {
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgb(206, 206, 206);
+    h3 {
+      font-weight: 900;
+      font-size: 25px;
+      padding-bottom: 20px;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    input[type="radio"] {
+      appearance: none;
+      background-color: #fff;
+      margin: 0;
+      color: currentColor;
+      width: 15px;
+      height: 15px;
+      border: 2px solid rgb(69, 69, 69);
+      border-radius: 50%;
+      margin: 5px 0;
+      position: relative;
+      cursor: pointer;
+    }
+    input[type="radio"]::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      width: 0%;
+      height: 0%;
+      transition: 0.3s;
+    }
+    input[type="radio"]:checked::before {
+      width: 70%;
+      height: 70%;
+      background-color: black;
+    }
+
+    input[type="radio"]:focus {
+      // outline: max(2px, 0.15em) solid currentColor;
+      // outline-offset: max(2px, 0.15em);
+      // width: 30%;
+    }
+  }
+  .price {
+    padding: 50px 0;
+    border-bottom: 1px solid rgb(206, 206, 206);
+    h3 {
+      font-weight: 900;
+      font-size: 25px;
+    }
+  }
+  .size {
+    padding: 50px 0;
+    border-bottom: 1px solid rgb(206, 206, 206);
+    h3 {
+      font-weight: 900;
+      font-size: 25px;
+      padding-bottom: 20px;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    input[type="radio"] {
+      appearance: none;
+      background-color: #fff;
+      margin: 0;
+      color: currentColor;
+      width: 15px;
+      height: 15px;
+      border: 2px solid rgb(69, 69, 69);
+      border-radius: 50%;
+      margin: 5px 0;
+      position: relative;
+      cursor: pointer;
+    }
+    input[type="radio"]::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      width: 0%;
+      height: 0%;
+      transition: 0.3s;
+    }
+    input[type="radio"]:checked::before {
+      width: 70%;
+      height: 70%;
+      background-color: black;
+    }
+
+    input[type="radio"]:focus {
+      // outline: max(2px, 0.15em) solid currentColor;
+      // outline-offset: max(2px, 0.15em);
+      // width: 30%;
+    }
+  }
+  .filter {
+    width: 100%;
+    background-color: red;
+    border: none;
+    color: white;
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .side-bar-container {
+    height: 0px;
+    overflow: hidden;
+    display: none;
+  }
+  .side-bar-container.show {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+  }
+}

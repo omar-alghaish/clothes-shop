@@ -1,0 +1,27 @@
+.pagination-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    gap:5px;
+
+    button{
+        padding: 10px 15px;
+        color: rgb(255, 255, 255);
+        background-color:rgb(255, 0, 0);
+        border:none;
+        border-radius:4px;
+        cursor: pointer;
+        &:disabled{
+            opacity: .5;
+        }
+        &:focus{
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+        &:checked{
+            background-color: red;
+
+        }
+    }
+}

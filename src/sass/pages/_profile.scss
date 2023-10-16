@@ -1,0 +1,122 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .main-container {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    padding: 40px ;
+    gap: 20px;
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      background:linear-gradient(90deg,red 50%,rgb(0, 0, 0) 50%);
+      border-radius: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100%;
+        // display: none;
+      }
+    }
+    .data {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      h1{
+        font-size: 25px;
+      }
+      .about {
+        padding: 30px 0;
+        padding-top: 0;
+        border-bottom: 1px solid rgb(97, 97, 97);
+        table {
+          background-color: rgba(255, 0, 0, 0);
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          padding-top: 15px;
+          th {
+            width: 60px;
+            background-color: rgba(255, 0, 0, 0);
+            text-align: start;
+            font-weight: 700;
+          }
+        }
+      }
+      .favourits {
+        padding: 30px 0;
+        border-bottom: 1px solid rgb(97, 97, 97);
+        h1{
+          padding-bottom: 20px;  
+        }
+      
+      }
+      .wish-list {
+        padding: 30px 0;
+
+        border-bottom: 1px solid rgb(97, 97, 97);
+        h1{
+          padding-bottom: 20px;  
+        }
+    
+      }
+      .buttons {
+        padding: 30px 0;
+        a {
+          display: flex;
+          width: 100%;
+          padding: 10px;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  button {
+    width: 100%;
+    // border-radius: 20px;
+    border: none;
+    color: white;
+    background: rgb(246, 47, 47);
+    padding: 10px;
+  }
+  a {
+    color: red;
+    width: 100%;
+  }
+  .error {
+    color: red;
+    position: absolute;
+    bottom: 70px;
+  }
+  .message {
+    color: rgb(14, 216, 0);
+    position: absolute;
+    bottom: 70px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .profile-container {
+    .main-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      .data{
+        width: 100%;
+        .about{
+          padding-top: 30px;
+        }
+      }
+    }
+  }
+}
